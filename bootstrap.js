@@ -14,8 +14,6 @@ fs.writeFileSync('./application.yml', application)
 const spawn = require('child_process').spawn;
 const child = spawn('java', ['-jar', 'Lavalink.jar'])
 
-require('heroku-self-ping').default("https://lavalink-0.herokuapp.com:80/");
-
 child.stdout.setEncoding('utf8')
 child.stderr.setEncoding('utf8')
 
