@@ -32,3 +32,5 @@ child.on('error', (error) => {
 child.on('close', (code) => {
   console.log(`Lavalink exited with code ${code}`);
 });
+
+require('heroku-self-ping').default(process.env.APP_URL);
